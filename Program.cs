@@ -38,6 +38,9 @@ namespace EcommerceProject
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
+            app.MapControllerRoute(
+                name: "Admin",
+                pattern: "{area:exists}/{controller=Product}/{action=Index}/{id?}");
             app.Run();
         }
     }
